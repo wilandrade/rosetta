@@ -1,0 +1,15 @@
+{
+  "name": "rosetta",
+  "version": "1.0.0",
+  "description": "Crowdsourced english-japanese sentences",
+  "main": "index.js",
+  "author": "wil andrade",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.19.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
