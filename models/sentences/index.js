@@ -1,7 +1,6 @@
 const moment = require("moment");
 
 const Sentence = function(row) {
-  console.log(row);
   this.id = row.id;
   this.username = row.username;
   this.en_text = row.en_text;
@@ -26,6 +25,8 @@ Sentence.prototype.serialize = function() {
 module.exports = knex => {
   return {
     list: require("./list_sentences")(knex, Sentence),
-    create: require("./create_sentences")(knex, Sentence)
+    create: require("./create_sentences")(knex, Sentence),
+    delete: require("./delete_sentence")(knex, Sentence),
+    updateScoreById: require("./update_score")(knex, Sentence)
   };
 };
