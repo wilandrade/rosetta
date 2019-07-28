@@ -33,7 +33,7 @@
 > yarn 
 
 
-###Run the app locally
+### Run the app locally
 
 >Start Postgres
 
