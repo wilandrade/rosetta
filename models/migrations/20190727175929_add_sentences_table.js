@@ -1,19 +1,18 @@
-exports.up = function (knex) {
+exports.up = function(knex) {
   return knex.schema.createTable("sentences", t => {
-    t.increments() // auto-incrementing id column
-      .index(); // index this column
+    t.increments().index();
 
-    t.string("username")
-      .index(); // index it
+    t.string("username").notNullable(); //user who created sentence
 
-    t.text("en_text") // maximum length of 15 characters
+    t.string("en_text")
       .notNullable()
-      .unique() // add a unique constraint to this column
-      .index(); // index it
+      .unique(); // add a unique constraint to this column
 
-    t.text("jp_text") // maximum length of 15 characters
-      .unique() // add a unique constraint to this column
-      .index(); // index it
+    t.string("jp_text"); // add a unique constraint to this column;
+
+    t.string("tag"); // tag that can be used optionally to group different sentences.
+
+    t.integer("points"); //points a translation sentence has accrued
 
     t.timestamp("created_at")
       .notNullable()
@@ -21,6 +20,6 @@ exports.up = function (knex) {
   });
 };
 
-exports.down = function (knex) {
+exports.down = function(knex) {
   return knex.schema.dropTable("sentences");
 };
