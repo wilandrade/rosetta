@@ -1,6 +1,6 @@
 const moment = require("moment");
 
-const Sentence = function(row) {
+const Sentence = function (row) {
   this.id = row.id;
   this.username = row.username;
   this.englishText = row.en_text;
@@ -8,18 +8,18 @@ const Sentence = function(row) {
   this.createdAt = new Date(row.created_at);
 };
 
-Sentence.prototype.serialize = function() {
+Sentence.prototype.serialize = function () {
   return {
     id: this.id,
     username: this.username,
     englishText: this.englishText,
-    japaneseText = this.japaneseText,
+    japaneseText: this.japaneseText,
     createdAt: moment(this.createdAt).fromNow(),
   };
 };
 
 module.exports = (knex) => {
   return {
-    list: require("./sentences_list")(knex, Sentence),
+    list: require("./list_sentences")(knex, Sentence),
   };
 };

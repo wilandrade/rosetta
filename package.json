@@ -2,6 +2,12 @@
   "name": "rosetta",
   "version": "1.0.0",
   "description": "Crowdsourced english-japanese sentences",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "migrate": "knex migrate:latest --knexfile models/knexfile.js",
+    "rollback": "knex migrate:rollback --knexfile models/knexfile.js "
+  },
   "main": "index.js",
   "author": "wil andrade",
   "license": "MIT",

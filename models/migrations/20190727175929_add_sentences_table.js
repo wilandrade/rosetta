@@ -1,17 +1,17 @@
-exports.up = function(knex) {
-  // create the 'sentences' table with three columns
+exports.up = function (knex) {
   return knex.schema.createTable("sentences", t => {
     t.increments() // auto-incrementing id column
       .index(); // index this column
 
-    t.string("username", 15) // maximum length of 15 characters
+    t.string("username")
       .index(); // index it
 
-    t.string("en_text", 15) // maximum length of 15 characters
+    t.text("en_text") // maximum length of 15 characters
+      .notNullable()
       .unique() // add a unique constraint to this column
       .index(); // index it
 
-    t.string("jp_text", 15) // maximum length of 15 characters
+    t.text("jp_text") // maximum length of 15 characters
       .unique() // add a unique constraint to this column
       .index(); // index it
 
@@ -21,6 +21,6 @@ exports.up = function(knex) {
   });
 };
 
-exports.down = function(knex) {
-  return knex.schema.dropTable("users");
+exports.down = function (knex) {
+  return knex.schema.dropTable("sentences");
 };
