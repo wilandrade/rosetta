@@ -21,8 +21,9 @@
 ## Usage
 
 > 1) Send GraphQL query to localhost:3000/api
-> 2) Customize the query so that you only get the data you need
-> 3) Create new sentences and share with the community
+> 2) Visit localhost:3000/ to see landing page
+> 3) Customize the query so that you only get the data you need
+> 4) Create new sentences and share with the community 
 
 ### Queries
 > Sentences: [Sentence]!
