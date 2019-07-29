@@ -44,6 +44,7 @@
   }
 }
 ```
+### Mutations
 > CreateSentence(newSentence: SentenceInput): Sentence
 ```
 mutation {
