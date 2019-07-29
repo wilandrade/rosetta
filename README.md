@@ -20,6 +20,75 @@
 > 2) Customize the query so that you only get the data you need
 > 3) Create new sentences and share with the community
 
+### Queries
+> Sentences: [Sentence]!
+```
+{
+  Sentences {
+    id
+    jp_text
+    en_text
+    tag
+  }
+}
+
+```
+> GetSentencesByTag(tag: String): [Sentence]!
+```
+{
+  GetSentencesByTag(tag:"Intermediate") {
+    id
+    jp_text
+    en_text
+    tag
+  }
+}
+```
+> CreateSentence(newSentence: SentenceInput): Sentence
+```
+mutation {
+  CreateSentence(newSentence:{
+    username:"Wil"
+    en_text: "Is that so."
+    jp_text: "そうか"
+    tag: "Lame Phrases"
+    secret: "I see dead people"
+  }) {
+    id
+    en_text
+    jp_text
+  }
+}
+```
+> DeleteSentence(id: Int): Sentence
+```
+mutation {
+  DeleteSentence(id:12) {
+    id
+  }
+}
+```
+> UpVote(id: Int): Sentence
+```
+mutation {
+  UpVote(id: 1) {
+    en_text
+    jp_text
+    points
+  }
+}
+```
+> DownVote(id: Int): Sentence
+```
+mutation {
+  DownVote(id: 1) {
+    en_text
+    jp_text
+    points
+  }
+}
+```
+
 
 ## Development
 
