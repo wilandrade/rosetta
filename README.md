@@ -1,6 +1,11 @@
 # Rosetta #
 > A Japanese-English Sentences API
 
+# Tech Used #
+<img src="https://cdn-images-1.medium.com/max/1000/1*IvCDlfi3vQfgyKO1eFv4jA.png" alt="graphql" width="200">
+<img src="https://https://wiki.postgresql.org/images/9/9a/PostgreSQL_logo.3colors.540x557.png" alt="graphql" width="200">
+<img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png" alt="graphql" width="200">
+
 ## Summary ##
   > Rosetta is a one stop shop to find EN-JP sentence translations. Just write your query, using the super simple and user-friendly GraphQL API, and get hundreds of sentences. With many more to come.
 
