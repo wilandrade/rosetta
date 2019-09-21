@@ -1,12 +1,15 @@
 # Rosetta #
-> A Japanese-English Sentences API
+> A Japanese-English Sentences API (WIP)
 
 # Tech Used #
 <img src="https://cdn-images-1.medium.com/max/1000/1*IvCDlfi3vQfgyKO1eFv4jA.png" alt="graphql" width="200">
 <img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png" alt="nodejs" width="200">
 
 ## Summary ##
-  > Rosetta is a one stop shop to find EN-JP sentence translations. Just write your query, using the super simple and user-friendly GraphQL API, and get hundreds of sentences. With many more to come.
+  > Rosetta is intended to be a an API where programmers can find EN-JP sentence translations. Just write your query, using the super simple and user-friendly GraphQL API, and get user created sentences. With many more to come.
+  
+ ## WORK IN PROGRESS ##
+ > Most of the API works, but I still need to add a few features like authentication, etc. And make seed some sentences into the API. I hope to have time to work on this soon, as I am really passionate about language learning and I think native speaker generated sentences are the best source to learn from.
 
 ## Table of Contents
 
